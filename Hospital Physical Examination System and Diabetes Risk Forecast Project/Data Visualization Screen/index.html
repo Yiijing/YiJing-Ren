@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<!-- 新 Bootstrap 核心 CSS 文件 -->
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+		<script src="js/jquery.min.js"></script>
+		<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+		<script src="js/bootstrap.min.js"></script>
+		<link href="css/index.css" rel="stylesheet" />
+	</head>
+	<body>
+		<header>糖尿病患者体检报告数据分析</header>
+		<div class="container m-20">
+			<div class="row">
+				<div class="col-lg-3">
+					<div class="box1">
+						<div class="title">患者血液健康状况分析</div>
+						<div class="box1_con" id="box1"></div>
+					</div>
+					<div class="box2 m-20">
+						<div class="title">患者血糖水平分析</div>
+						<div class="box2_con" id="box2"></div>
+					</div>
+				</div>
+				<div class="col-lg-6">
+					<div class="box3">
+						<div class="title">患者基本统计信息</div>
+						<div class="box3_con">
+							<div class="box3_con_left" id="box3_left"></div>
+							<div class="box3_con_right">
+								<div class="box3_con_right_top">
+									<div class="row">
+										<div class="col-lg-4 data_bg"><p>35-50岁</p><small>高发病年龄段</small></div>
+										<div class="col-lg-4 data_bg"><p>50.97%</p><small>男性患者占比</small></div>
+										<div class="col-lg-4 data_bg"><p>49.03%</p><small>女性患者占比</small></div>
+									</div>
+								</div>
+								<div class="box3_con_right_bot" id="box3_right"></div>
+							</div>
+						</div>
+					</div>
+					<div class="box4 m-20">
+						<div class="title">患者肝脏与脂质代谢水平分析</div>
+						<div class="box4_con" id="box4"></div>
+					</div>
+				</div>
+				<div class="col-lg-3 box5">
+					<div class="title">判断是否患病的主要生化指标</div>
+					<div class="box5_con">
+						<div class="box5_con_top" id="box5"></div>
+						<div class="title m-20">与糖尿病相关的生化指标</div>
+						<div class="box5_con_bot">
+							<ul>
+								<li>1、天门冬氨酸氨基转换酶： 与代谢和胰岛功能有关。</li>
+								<li>2、丙氨酸氨基转换酶： 与糖尿病相关的脂质代谢有关。</li>
+								<li>3、碱性磷酸酶： 与肝功能异常有关，而肝脏在糖尿病中有重要作用。</li>
+								<li>4、r-谷氨酰基转换酶： 与胰岛功能和胰岛素抵抗有关的生化指标。</li>
+								<li>5、总蛋白和白蛋白： 反映肝功能和营养状态。</li>
+								<li>6、血小板指标：与糖尿病的并发症，尤其是血管并发症有关。</li>
+								<li>7、白细胞不同类型的百分比：可以提供关于免疫系统功能的信息。</li>
+								<li>8、血糖： 血糖水平是糖尿病的主要诊断标志之一。</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script type="text/javascript" src="js/echarts.min.js"></script>
+		<script type="text/javascript" src="js/color.js"></script>
+		<script type="text/javascript" src="js/box1.js"></script>
+		<script type="text/javascript" src="js/box2.js"></script>
+		<script type="text/javascript" src="js/box3_left.js"></script>
+		<script type="text/javascript" src="js/box3_right.js"></script>
+		<script type="text/javascript" src="js/box4.js"></script>
+		<script type="text/javascript" src="js/box5.js"></script>
+	</body>
+</html>

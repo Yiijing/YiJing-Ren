@@ -1,0 +1,96 @@
+create table Users(
+user_id varchar(20) primary key not null,
+username varchar(20) not null,
+password varchar(20) not null,
+email varchar(20),
+contact_number varchar(11)
+);
+
+create table PatientInfo(
+patient_id varchar(20) primary key not null,
+user_id varchar(20) not null,
+full_name varchar(20) not null,
+date_of_birth date,
+gender int(3),
+foreign key(user_id) references Users(user_id)
+);
+
+create table DoctorInfo(
+doctor_id varchar(20) primary key not null,
+user_id varchar(20) not null,
+full_name varchar(20) not null,
+specialization varchar(20),
+foreign key(user_id) references Users(user_id)
+);
+
+create table Appointments(
+appointment_id varchar(20) primary key not null,
+patient_id varchar(20) not null,
+doctor_id varchar(20) not null,
+appointment_date date,
+appointment_time time,
+foreign key(patient_id) references PatientInfo(patient_id),
+foreign key(doctor_id) references DoctorInfo(doctor_id)
+);
+
+create table BloodRoutine(
+blood_id varchar(20) primary key not null,
+patient_id varchar(20) not null,
+doctor_id varchar(20),
+appointment_id varchar(20),
+Neu float,
+Lym float,
+Mon float,
+Eos float,
+Bas float,
+foreign key(patient_id) references PatientInfo(patient_id),
+foreign key(doctor_id) references DoctorInfo(doctor_id),
+foreign key(appointment_id) references Appointments(appointment_id)
+);
+
+create table Liver(
+liver_id varchar(20) primary key not null,
+patient_id varchar(20) not null,
+doctor_id varchar(20),
+appointment_id varchar(20),
+asp float,
+alanine float,
+alkaline float,
+r_glutamyl float,
+foreign key(patient_id) references PatientInfo(patient_id),
+foreign key(doctor_id) references DoctorInfo(doctor_id),
+foreign key(appointment_id) references Appointments(appointment_id)
+);
+
+create table Renin(
+renin_id varchar(20) primary key not null,
+patient_id varchar(20) not null,
+doctor_id varchar(20),
+appointment_id varchar(20),
+urea float,
+creatinine float,
+uric_acid float,
+foreign key(patient_id) references PatientInfo(patient_id),
+foreign key(doctor_id) references DoctorInfo(doctor_id),
+foreign key(appointment_id) references Appointments(appointment_id)
+);
+
+
+create table Diagnosis(
+diagnosis_id varchar(20) primary key not null,
+patient_id varchar(20) not null,
+doctor_id varchar(20),
+appointment_id varchar(20),
+blood_id varchar(20),
+liver_id varchar(20),
+renin_id varchar(20),
+foreign key(patient_id) references PatientInfo(patient_id),
+foreign key(doctor_id) references DoctorInfo(doctor_id),
+foreign key(appointment_id) references Appointments(appointment_id),
+foreign key(blood_id) references BloodRoutine(blood_id),
+foreign key(liver_id) references Liver(liver_id),
+foreign key(renin_id) references Renin(renin_id)
+);
+
+
+
