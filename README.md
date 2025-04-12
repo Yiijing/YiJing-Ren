@@ -1,4 +1,4 @@
-Here are three projects that I have worked on myself 😊
+Here are four projects that I have worked on myself 😊
 
 📍 China Earthquake Visualization Project
 
@@ -23,3 +23,9 @@ the front-end implements a visual interactive interface that supports multi-moda
 the back-end combines OpenCV to realize garbage image detection and model inference classification.
 
 •The model was trained on a Huawei public garbage sorting dataset (containing 44 types of garbage and 14,823 images) using YOLOv8s as the baseline network.
+
+📍 Alien_invasion Project
+
+• It's a game called Alien Invasion developed using Pycharm.
+
+• In the project, create a spaceship capable of moving left and right and shooting based on user input, and create a group of aliens as targets to shoot. Limit the number of ships available to players and add scoreboards.
